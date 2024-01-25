@@ -1,0 +1,33 @@
+.scrollwatcher {
+  height: 2px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: goldenrod;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scrollwatcher linear;
+
+  /* here in scroll function we can pass x or y depending on which direction we want. also block and inline*/
+  animation-timeline: scroll();
+}
+@keyframes scrollwatcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+.animationWipe {
+  animation-name: wipe-enter;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
